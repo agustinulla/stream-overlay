@@ -9,7 +9,7 @@
       background: transparent;
       overflow: hidden;
       font-family: Arial, Helvetica, sans-serif;
-      color: #111;              /* negro oscuro para buen contraste en amarillo */
+      color: #111; /* negro oscuro para buen contraste en amarillo */
       height: 100vh;
     }
     .container {
@@ -21,7 +21,11 @@
     .fondo {
       position: absolute;
       inset: 0;
-      background: url("file:///C:/Users/USUARIO/Desktop/E'Gatorei/Scripts Propios/recuadro1.png") center / 100% 100% no-repeat;
+      background: url("./recuadro1.png") center / cover no-repeat;
+      /* Alternativas si cover no te gusta:
+         background: url("./recuadro1.png") center / contain no-repeat;
+         o background: url("./recuadro1.png") center / 100% 100% no-repeat;
+      */
       pointer-events: none;
       z-index: 1;
     }
@@ -31,11 +35,11 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 60px;              /* ← ajusta este valor: 40–80px según cómo se vea */
+      padding: 0 60px; /* ← ajusta este valor: 40–80px según cómo se vea */
       height: 100%;
     }
     .hora {
-      font-size: 68px;              /* más grande para aprovechar el ancho */
+      font-size: 68px; /* más grande para aprovechar el ancho */
       font-weight: bold;
       text-shadow: 3px 3px 8px rgba(0,0,0,0.5);
       min-width: 180px;
